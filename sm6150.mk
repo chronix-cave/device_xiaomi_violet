@@ -30,6 +30,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# Inherit from Lunaris Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # API level, the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 28
 
@@ -42,6 +45,8 @@ PRODUCT_PACKAGES += \
     fs_config_files
 
 # Audio
+TARGET_USES_CUSTOM_DOLBY_XML := true
+
 PRODUCT_PACKAGES += \
     audio.primary.sm6150 \
     liba2dpoffload \

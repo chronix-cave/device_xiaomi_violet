@@ -44,9 +44,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
-# Audio
-TARGET_USES_CUSTOM_DOLBY_XML := true
-
+# Audio 
 PRODUCT_PACKAGES += \
     audio.primary.sm6150 \
     liba2dpoffload \
